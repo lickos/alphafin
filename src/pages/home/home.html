@@ -1,18 +1,96 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+<ion-header padding-top>
+  <alphaheader></alphaheader>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content no-padding>
+    <ion-slides text-wrap autoplay="3000" style="height:65%; background-color:#252525">
+      <ion-slide>
+        <img src="{{Cyprus?.image_url}}" />
+        <ion-badge id="firstBadge">Πολιτική</ion-badge>
+        <h4>{{Cyprus?.title}}</h4>
+        <p>{{Cyprus?.teaser}}</p>
+        <ion-item class="transparent">
+          <ion-icon name="ios-clock-outline" color="lightGrey" item-start> 24/7/20107 - 14:36</ion-icon>
+          <ion-icon name="md-share" padding-right color="pnored" item-end> {{main?.time}}</ion-icon>
+          <ion-icon name="md-bookmark" color="pnored" item-end></ion-icon>
+        </ion-item>
+      </ion-slide>
+    <ion-slide>
+        <img src="{{Politics?.image_url}}" />
+        <ion-badge id="firstBadge">{{Cyprus?.category}}</ion-badge>
+        <h4>{{Politics?.title}}</h4>
+        <p>{{Politics?.teaser}}</p>
+        <ion-item class="transparent">
+          <ion-icon name="ios-clock-outline" color="lightGrey" item-start> 24/7/20107 - 14:36</ion-icon>
+          <ion-icon name="md-share" padding-right color="pnored" item-end> {{main?.time}}</ion-icon>
+          <ion-icon name="md-bookmark" color="pnored" item-end></ion-icon>
+        </ion-item>
+      </ion-slide>
+    <ion-slide>
+        <img src="{{Greece?.image_url}}" />
+        <ion-badge id="firstBadge">{{Greece?.category}}</ion-badge>
+        <h4>{{Greece?.title}}</h4>
+        <p>{{Greecee?.teaser}}</p>
+        <ion-item class="transparent">
+          <ion-icon name="ios-clock-outline" color="lightGrey" item-start> 24/7/20107 - 14:36</ion-icon>
+          <ion-icon name="md-share" padding-right color="pnored" item-end> {{main?.time}}</ion-icon>
+          <ion-icon name="md-bookmark" color="pnored" item-end></ion-icon>
+        </ion-item>
+      </ion-slide>
+      <ion-slide>
+        <img src="{{Diethni?.image_url}}" />
+        <ion-badge id="firstBadge">{{Diethni?.category}}</ion-badge>
+        <h4>{{Diethni?.title}}</h4>
+        <p>{{Diethni?.teaser}}</p>
+        <ion-item class="transparent">
+          <ion-icon name="ios-clock-outline" color="lightGrey" item-start> 24/7/20107 - 14:36</ion-icon>
+          <ion-icon name="md-share" padding-right color="pnored" item-end> {{main?.time}}</ion-icon>
+          <ion-icon name="md-bookmark" color="pnored" item-end></ion-icon>
+        </ion-item>
+      </ion-slide>
+      <ion-slide>
+        <img src="{{Sports?.image_url}}" />
+        <ion-badge id="firstBadge">{{Sports?.category}}</ion-badge>
+        <h4>{{Sports?.title}}</h4>
+        <p>{{Sports?.teaser}}</p>
+        <ion-item class="transparent">
+          <ion-icon name="ios-clock-outline" color="lightGrey" item-start> 24/7/20107 - 14:36</ion-icon>
+          <ion-icon name="md-share" padding-right color="pnored" item-end> {{main?.time}}</ion-icon>
+          <ion-icon name="md-bookmark" color="pnored" item-end></ion-icon>
+        </ion-item>
+      </ion-slide>
+      <ion-slide>
+        <img src="{{Entertainment?.image_url}}" />
+        <ion-badge id="firstBadge">{{Entertainment?.category}}</ion-badge>
+        <h4>{{Entertainment?.title}}</h4>
+        <p>{{Entertainment?.teaser}}</p>
+        <ion-item class="transparent">
+          <ion-icon name="ios-clock-outline" color="lightGrey" item-start> 24/7/20107 - 14:36</ion-icon>
+          <ion-icon name="md-share" padding-right color="pnored" item-end> {{main?.time}}</ion-icon>
+          <ion-icon name="md-bookmark" color="pnored" item-end></ion-icon>
+        </ion-item>
+      </ion-slide>
+      <ion-slide>
+        <img src="{{Health?.image_url}}" />
+        <ion-badge id="firstBadge">{{Health?.category}}</ion-badge>
+        <h4>{{Health?.title}}</h4>
+        <p>{{Health?.teaser}}</p>
+        <ion-item class="transparent">
+          <ion-icon name="ios-clock-outline" color="lightGrey" item-start> 24/7/20107 - 14:36</ion-icon>
+          <ion-icon name="md-share" padding-right color="pnored" item-end> {{main?.time}}</ion-icon>
+          <ion-icon name="md-bookmark" color="pnored" item-end></ion-icon>
+        </ion-item>
+      </ion-slide>
+      <ion-slide>
+        <img src="{{Economy?.image_url}}" />
+        <ion-badge id="firstBadge">{{Economy?.category}}</ion-badge>
+        <h4>{{Economy?.title}}</h4>
+        <p>{{Economy?.teaser}}</p>
+        <ion-item class="transparent">
+          <ion-icon name="ios-clock-outline" color="lightGrey" item-start> 24/7/20107 - 14:36</ion-icon>
+          <ion-icon name="md-share" padding-right color="pnored" item-end> {{main?.time}}</ion-icon>
+          <ion-icon name="md-bookmark" color="pnored" item-end></ion-icon>
+        </ion-item>
+      </ion-slide>
+  </ion-slides>
 </ion-content>
