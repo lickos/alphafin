@@ -1,0 +1,48 @@
+<ion-header padding-top>
+  <alphaheader></alphaheader>
+</ion-header>
+
+
+<ion-content>
+  <ion-slides text-wrap autoplay="4000" style="height:65%; background-color:#252525">
+    <ion-slide>
+      <div class="imageDiv">
+        <img class="carouselImage" src="{{image0?.image_url}}" />
+      </div>
+        <ion-badge class="{{badgeClass}} badgeClass">{{image0?.category}}</ion-badge>
+        <h3>{{image0?.title | removequotes}}</h3>
+        <p>{{image0?.teaser | removequotes}}</p>
+        <ion-item class="transparent" padding>
+          <ion-icon name="ios-clock-outline" color="textColor" item-start> {{image0?.date}} - {{image0?.time}}</ion-icon>
+          <ion-icon name="md-share" padding-right color="pnored" item-end></ion-icon>
+          <ion-icon name="md-bookmark" color="pnored" item-end></ion-icon>
+        </ion-item>
+    </ion-slide>
+    <ion-slide>
+      <div class="imageDiv">
+        <img class="carouselImage" src="{{image1?.image_url}}" />
+      </div>
+        <ion-badge class="{{badgeClass}} badgeClass">{{image1?.category}}</ion-badge>
+        <h3>{{image1?.title | removequotes}}</h3>
+        <p>{{image1?.teaser | removequotes}}</p>
+        <ion-item class="transparent" padding>
+          <ion-icon name="ios-clock-outline" color="textColor" item-start> {{image1?.date}} - {{image1?.time}}</ion-icon>
+          <ion-icon name="md-share" padding-right color="pnored" item-end></ion-icon>
+          <ion-icon name="md-bookmark" color="pnored" item-end></ion-icon>
+        </ion-item>
+    </ion-slide>
+    <ion-slide>
+      <div class="imageDiv">
+        <img class="carouselImage" src="{{image2?.image_url}}" />
+      </div>
+        <ion-badge class="{{badgeClass}} badgeClass">{{image2?.category}}</ion-badge>
+        <h3 padding-left>{{image2?.title | removequotes}}</h3>
+        <p padding-left>{{image2?.teaser | removequotes}}</p>
+        <ion-item class="transparent" padding>
+          <ion-icon name="ios-clock-outline" color="textColor" item-start> {{image2?.date}} - {{image2?.time}}</ion-icon>
+          <ion-icon name="md-share" padding-right color="pnored" item-end></ion-icon>
+          <ion-icon name="md-bookmark" color="pnored" item-end></ion-icon>
+        </ion-item>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

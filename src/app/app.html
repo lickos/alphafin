@@ -1,6 +1,6 @@
 <ion-menu [content]="content">
-<ion-header padding-top class="greyClr">
-    <ion-item class="greyClr" no-lines>
+  <ion-header padding-top class="greyClr">
+    <ion-item class="greyClr">
       <ion-row>
         <ion-col col-2>
           <ion-icon class="headIcon" color="pnored" menuClose name="md-close"></ion-icon>
@@ -19,8 +19,8 @@
 </ion-header>
 
   <ion-content class="lighter">
-    <ion-list no-lines>
-      <button class="lighter" no-padding ion-item (click)="openCyprus()">
+    <ion-list>
+      <button menuClose class="lighter" no-padding ion-item (click)="openPage('https://alphanews.live/json/cat/1')">
         <ion-grid>
           <ion-row>
             <ion-col col-1 class="CyprusCol">
@@ -36,7 +36,7 @@
         Νέα Αγοράς
       </button>
 
-      <button class="lighter" no-padding ion-item (click)="openPolitiki()">
+      <button class="lighter" no-padding ion-item menuClose (click)="openPage('https://alphanews.live/json/cat/2')">
         <ion-grid>
           <ion-row>
             <ion-col col-1 class="PolitikiCol">
@@ -54,7 +54,7 @@
         <button class="darker" *ngIf="showMe" ion-item (click)="showItems()">
           Ενέργεια
         </button>
-      <button class="lighter" no-padding menuClose ion-item (click)="openEllada()">
+      <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/4')">
         <ion-grid>
           <ion-row>
             <ion-col col-1 class="GreeceCol">
@@ -65,7 +65,7 @@
           </ion-row>
         </ion-grid>
       </button>
-      <button class="lighter" no-padding menuClose ion-item (click)="openDiethni()">
+      <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/5')">
         <ion-grid>
           <ion-row>
             <ion-col col-1 class="DiethniCol">
@@ -76,7 +76,7 @@
           </ion-row>
         </ion-grid>
       </button>
-      <button class="lighter" no-padding ion-item (click)="openSports()">
+      <button class="lighter" no-padding ion-item menuClose (click)="openPage('https://alphanews.live/json/cat/6')">
         <ion-grid>
           <ion-row>
             <ion-col col-1 class="SportsCol">
@@ -100,7 +100,7 @@
         <button class="darker" menuClose *ngIf="showMe2" ion-item (click)="openAthlitismos()">
           Αθλητισμός
         </button>
-        <button class="lighter" no-padding menuClose ion-item (click)="openDiethni()">
+        <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/9')">
           <ion-grid>
             <ion-row>
               <ion-col col-1 class="EconomyCol">
@@ -111,7 +111,7 @@
             </ion-row>
           </ion-grid>
         </button>
-        <button class="lighter" no-padding ion-item (click)="openHealth()">
+        <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/8')">
           <ion-grid>
             <ion-row>
               <ion-col col-1 class="HealthCol">
@@ -129,7 +129,7 @@
         <button class="darker" no-lines menuClose *ngIf="showYgeia" ion-item (click)="openDiethniProtathlimata()">
           Ψυχολογία
         </button>
-        <button class="lighter" no-padding ion-item (click)="openHealth()">
+        <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/7')">
           <ion-grid>
             <ion-row>
               <ion-col col-1 class="EntertainmentCol">
@@ -215,7 +215,6 @@
       </ion-row>
     </ion-grid>
   </ion-content>
-
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->

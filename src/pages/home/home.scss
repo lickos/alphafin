@@ -1,10 +1,11 @@
 page-home {
 }
 
-ion-slide h4 {
-  font-size: 2rem;
+ion-slide h3 {
+  font-size: 2.1rem;
   text-align: left;
-  color: #f4f4f4;
+  color: #c8c6c6;
+  padding-left: 1rem;
 }
 
 ion-slide img {
@@ -14,12 +15,12 @@ ion-slide img {
 }
 
 ion-slide p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-top: 0px;
   margin-bottom: 0px;
-  padding: 0px;
+  padding: 0 0 0 1rem;
   text-align: left;
-  color: #f4f4f4;
+  color: #c8c6c6;
 }
 
 .marginHeader {
@@ -27,18 +28,18 @@ ion-slide p {
   margin-bottom: 3px;
 }
 
-.platform-ios ion-badge {
+.platform-ios #firstBadge {
   background-color: #4d5865;
-  position: fixed;
+  position: absolute;
   left: 20px;
-  top: 28vh;
+  top: 31vh;
 }
 
-.platform-android ion-badge {
+.platform-android #firstBadge {
   background-color: #4d5865;
-  position: fixed;
+  position: absolute;
   left: 20px;
-  top: 27vh;
+  top: 31vh;
 }
 
 .platform-ios #secondBadge {

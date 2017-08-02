@@ -28,7 +28,6 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public http: Http) {
     this.http.get(this.urlCyprus).map(res => res.json()).subscribe(data => {
-      console.log(data);
       this.Cyprus = data[0];
     })
     this.http.get(this.urlPolitics).map(res => res.json()).subscribe(data => {

@@ -6,18 +6,26 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { CatpagePage } from '../pages/catpage/catpage';
+
 import { AlphaheaderComponent } from '../components/alphaheader/alphaheader';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
 
+import { RemovequotesPipe } from '../pipes/removequotes/removequotes';
+
+import { GetdataProvider } from '../providers/getdata/getdata';
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    CatpagePage,
     AlphaheaderComponent,
-    ListPage
+    ListPage,
+    RemovequotesPipe
   ],
   imports: [
     BrowserModule,
@@ -28,6 +36,7 @@ import { OneSignal } from '@ionic-native/onesignal';
   entryComponents: [
     MyApp,
     HomePage,
+    CatpagePage,
     AlphaheaderComponent,
     ListPage
   ],
@@ -35,7 +44,8 @@ import { OneSignal } from '@ionic-native/onesignal';
     StatusBar,
     SplashScreen,
     OneSignal,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GetdataProvider
   ]
 })
 export class AppModule {}
