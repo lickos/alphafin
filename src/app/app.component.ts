@@ -1,32 +1,33 @@
-import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { OneSignal } from '@ionic-native/onesignal';
+import { Component, ViewChild } from "@angular/core";
+import { Nav, Platform } from "ionic-angular";
+import { StatusBar } from "@ionic-native/status-bar";
+import { SplashScreen } from "@ionic-native/splash-screen";
+import { OneSignal } from "@ionic-native/onesignal";
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { CatpagePage } from '../pages/catpage/catpage';
+import { HomePage } from "../pages/home/home";
+import { ListPage } from "../pages/list/list";
+import { CatpagePage } from "../pages/catpage/catpage";
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: "app.html"
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string; component: any }>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, private oneSignal: OneSignal, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    private oneSignal: OneSignal,
+    public splashScreen: SplashScreen
+  ) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
-    ];
-
+    this.pages = [{ title: "Home", component: HomePage }, { title: "List", component: ListPage }];
   }
 
   initializeApp() {
@@ -40,9 +41,9 @@ export class MyApp {
     });
   }
 
-  openPage(url) {
+  openPage(url, catId) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(CatpagePage, {'url': url});
+    this.nav.setRoot(CatpagePage, { url: url, catId: catId });
   }
 }

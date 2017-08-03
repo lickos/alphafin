@@ -12,15 +12,15 @@
           <button ion-button icon-end clear class="noUpper noMargin" color="pnored"><b>Ρυθμίσεις </b><ion-icon class="headIcon" name="md-more"></ion-icon></button>
         </ion-col>
       </ion-row>
-        <ion-item class="greyClr" no-padding>
-          <ion-icon item-end menuClose color="light" class="noMargin homeIc" name="ios-home-outline" (click)="openHome()" ></ion-icon>
-        </ion-item>
+      <ion-item class="greyClr" no-padding>
+        <ion-icon item-end menuClose color="light" class="noMargin homeIc" name="ios-home-outline" (click)="openHome()"></ion-icon>
+      </ion-item>
     </ion-item>
-</ion-header>
+  </ion-header>
 
   <ion-content class="lighter">
     <ion-list>
-      <button menuClose class="lighter" no-padding ion-item (click)="openPage('https://alphanews.live/json/cat/1')">
+      <button menuClose class="lighter" no-padding ion-item (click)="openPage('https://alphanews.live/json/cat/','1')">
         <ion-grid>
           <ion-row>
             <ion-col col-1 class="CyprusCol">
@@ -36,7 +36,7 @@
         Νέα Αγοράς
       </button>
 
-      <button class="lighter" no-padding ion-item menuClose (click)="openPage('https://alphanews.live/json/cat/2')">
+      <button class="lighter" no-padding ion-item menuClose (click)="openPage('https://alphanews.live/json/cat/', '2')">
         <ion-grid>
           <ion-row>
             <ion-col col-1 class="PolitikiCol">
@@ -48,13 +48,13 @@
         </ion-grid>
         <ion-icon item-end name="ios-arrow-down"></ion-icon>
       </button>
-        <button class="darker" no-lines menuClose *ngIf="showMe" ion-item (click)="openPolitiki()">
+      <button class="darker" no-lines menuClose *ngIf="showMe" ion-item (click)="openPolitiki()">
           Κυπριακό
         </button>
-        <button class="darker" *ngIf="showMe" ion-item (click)="showItems()">
+      <button class="darker" *ngIf="showMe" ion-item (click)="showItems()">
           Ενέργεια
         </button>
-      <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/4')">
+      <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/', '4')">
         <ion-grid>
           <ion-row>
             <ion-col col-1 class="GreeceCol">
@@ -65,7 +65,7 @@
           </ion-row>
         </ion-grid>
       </button>
-      <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/5')">
+      <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/', '5')">
         <ion-grid>
           <ion-row>
             <ion-col col-1 class="DiethniCol">
@@ -76,7 +76,7 @@
           </ion-row>
         </ion-grid>
       </button>
-      <button class="lighter" no-padding ion-item menuClose (click)="openPage('https://alphanews.live/json/cat/6')">
+      <button class="lighter" no-padding ion-item menuClose (click)="openPage('https://alphanews.live/json/cat/', '6')">
         <ion-grid>
           <ion-row>
             <ion-col col-1 class="SportsCol">
@@ -88,19 +88,19 @@
         </ion-grid>
         <ion-icon item-end name="ios-arrow-down"></ion-icon>
       </button>
-        <button class="darker" no-lines menuClose *ngIf="showMe2" ion-item (click)="openKypriakoProtathlima()">
+      <button class="darker" no-lines menuClose *ngIf="showMe2" ion-item (click)="openKypriakoProtathlima()">
           Κυπριακό Πρωτάθλημα
         </button>
-        <button class="darker" no-lines menuClose *ngIf="showMe2" ion-item (click)="openEllinikoProtathlima()">
+      <button class="darker" no-lines menuClose *ngIf="showMe2" ion-item (click)="openEllinikoProtathlima()">
           Ελληνικό Πρωτάθλημα
         </button>
-        <button class="darker" no-lines menuClose *ngIf="showMe2" ion-item (click)="openDiethniProtathlimata()">
+      <button class="darker" no-lines menuClose *ngIf="showMe2" ion-item (click)="openDiethniProtathlimata()">
           Διεθνή Πρωταθλήματα
         </button>
-        <button class="darker" menuClose *ngIf="showMe2" ion-item (click)="openAthlitismos()">
+      <button class="darker" menuClose *ngIf="showMe2" ion-item (click)="openAthlitismos()">
           Αθλητισμός
         </button>
-        <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/9')">
+      <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/', '9')">
           <ion-grid>
             <ion-row>
               <ion-col col-1 class="EconomyCol">
@@ -111,7 +111,7 @@
             </ion-row>
           </ion-grid>
         </button>
-        <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/8')">
+      <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/', '8')">
           <ion-grid>
             <ion-row>
               <ion-col col-1 class="HealthCol">
@@ -123,13 +123,13 @@
           </ion-grid>
           <ion-icon item-end name="ios-arrow-down"></ion-icon>
         </button>
-        <button class="darker" *ngIf="showYgeia" no-lines menuClose ion-item (click)="openDiethniProtathlimata()">
+      <button class="darker" *ngIf="showYgeia" no-lines menuClose ion-item (click)="openDiethniProtathlimata()">
           Fitness
         </button>
-        <button class="darker" no-lines menuClose *ngIf="showYgeia" ion-item (click)="openDiethniProtathlimata()">
+      <button class="darker" no-lines menuClose *ngIf="showYgeia" ion-item (click)="openDiethniProtathlimata()">
           Ψυχολογία
         </button>
-        <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/7')">
+      <button class="lighter" no-padding menuClose ion-item (click)="openPage('https://alphanews.live/json/cat/7')">
           <ion-grid>
             <ion-row>
               <ion-col col-1 class="EntertainmentCol">
@@ -141,16 +141,16 @@
           </ion-grid>
           <ion-icon item-end name="ios-arrow-down"></ion-icon>
         </button>
-        <button class="darker" *ngIf="showPsich" no-lines menuClose ion-item (click)="openDiethniProtathlimata()">
+      <button class="darker" *ngIf="showPsich" no-lines menuClose ion-item (click)="openDiethniProtathlimata()">
           Προτάσεις
         </button>
-        <button class="darker" *ngIf="showPsich" no-lines menuClose ion-item (click)="openDiethniProtathlimata()">
+      <button class="darker" *ngIf="showPsich" no-lines menuClose ion-item (click)="openDiethniProtathlimata()">
           Showbiz
         </button>
-        <button class="darker" *ngIf="showPsich" no-lines menuClose ion-item (click)="openDiethniProtathlimata()">
+      <button class="darker" *ngIf="showPsich" no-lines menuClose ion-item (click)="openDiethniProtathlimata()">
           Συνεντέυξεις
         </button>
-        <button class="darker" *ngIf="showPsich" no-lines menuClose ion-item (click)="openDiethniProtathlimata()">
+      <button class="darker" *ngIf="showPsich" no-lines menuClose ion-item (click)="openDiethniProtathlimata()">
           Κουζίνα
         </button>
       <button class="lighter" menuClose ion-item (click)="openOikonomia()">
@@ -170,13 +170,19 @@
             </p>
           </ion-col>
           <ion-col col-2>
-            <ion-badge class="socialIcons"><ion-icon color="dark" name="logo-facebook"></ion-icon></ion-badge>
+            <ion-badge class="socialIcons">
+              <ion-icon color="dark" name="logo-facebook"></ion-icon>
+            </ion-badge>
           </ion-col>
           <ion-col col-2>
-            <ion-badge class="socialIcons"><ion-icon color="dark" name="logo-twitter"></ion-icon></ion-badge>
+            <ion-badge class="socialIcons">
+              <ion-icon color="dark" name="logo-twitter"></ion-icon>
+            </ion-badge>
           </ion-col>
           <ion-col col-2>
-            <ion-badge class="socialIcons"><ion-icon color="dark" name="logo-youtube"></ion-icon></ion-badge>
+            <ion-badge class="socialIcons">
+              <ion-icon color="dark" name="logo-youtube"></ion-icon>
+            </ion-badge>
           </ion-col>
         </ion-row>
         <ion-row text-wrap align-items-center class="darkMenu">
@@ -189,7 +195,9 @@
             </p>
           </ion-col>
           <ion-col col-3>
-            <ion-badge class="socialIcons2"><ion-icon class="statsLight" name="ios-stats-outline"></ion-icon></ion-badge>
+            <ion-badge class="socialIcons2">
+              <ion-icon class="statsLight" name="ios-stats-outline"></ion-icon>
+            </ion-badge>
           </ion-col>
         </ion-row>
       </ion-grid>

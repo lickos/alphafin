@@ -1,60 +1,103 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { GetdataProvider } from '../../providers/getdata/getdata';
-
+import { Component } from "@angular/core";
+import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { GetdataProvider } from "../../providers/getdata/getdata";
+import { Slides } from "ionic-angular";
+import { ViewChild } from "@angular/core";
 
 @IonicPage()
 @Component({
-  selector: 'page-catpage',
-  templateUrl: 'catpage.html',
+  selector: "page-catpage",
+  templateUrl: "catpage.html"
 })
 export class CatpagePage {
+  @ViewChild(Slides) slides: Slides;
   url: string;
   items: any;
   badgeClass: string;
   image0: string;
   image1: string;
   image2: string;
+  image3: string;
+  image4: string;
+  image5: string;
+  image6: string;
+  image7: string;
+  image8: string;
+  image9: string;
+  catId: string;
+  titleColor: string;
+  urlTemp: string;
+  catIdTemp: any;
+  nextCatId: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public getdata: GetdataProvider) {
-    this.url = this.navParams.get('url');
+    this.urlTemp = this.navParams.get("url");
+    this.catId = this.navParams.get("catId");
+    this.url = this.urlTemp + this.catId;
   }
 
   ionViewDidLoad() {
-    this.getdata.getRemoteData(this.url).then(data=>{
+    this.getdata.getRemoteData(this.url).then(data => {
       this.image0 = data[0];
       this.image1 = data[1];
       this.image2 = data[2];
+      this.image3 = data[3];
+      this.image4 = data[4];
+      this.image5 = data[5];
+      this.image6 = data[6];
+      this.image7 = data[7];
+      this.image8 = data[8];
+      this.image9 = data[9];
       this.items = data;
-      switch (this.items[0].category)
-      {
+      switch (this.items[0].category) {
         case "Κύπρος":
-        this.badgeClass = "CyprusClass";
-        break;
+          this.badgeClass = "CyprusClass";
+          this.titleColor = "CyprusColor";
+          break;
         case "Πολιτική":
-        this.badgeClass = "PolitikiClass";
-        break;
+          this.badgeClass = "PolitikiClass";
+          break;
         case "Ελλάδα":
-        this.badgeClass = "GreeceClass";
-        break;
+          this.badgeClass = "GreeceClass";
+          break;
         case "Διεθνή":
-        this.badgeClass = "DiethniClass";
-        break;
+          this.badgeClass = "DiethniClass";
+          break;
         case "Αθλητικά":
-        this.badgeClass = "SportsClass";
-        break;
+          this.badgeClass = "SportsClass";
+          break;
         case "Ψυχαγωγία":
-        this.badgeClass = "EntertainmentClass";
-        break;
+          this.badgeClass = "EntertainmentClass";
+          break;
         case "Υγεία":
-        this.badgeClass = "HealthClass";
-        break;
+          this.badgeClass = "HealthClass";
+          break;
         case "Οικονομία":
-        this.badgeClass = "EconomyClass";
-        break;
+          this.badgeClass = "EconomyClass";
+          break;
         default:
-        this.badgeClass = "DefaultClass"
-      } 
+          this.badgeClass = "DefaultClass";
+      }
     });
+  }
+
+  goToNextCat(e) {
+    if (e.direction == 2) {
+      if (this.catId != "9") {
+        this.catIdTemp = parseInt(this.catId);
+        this.catIdTemp += 1;
+        this.nextCatId = this.catIdTemp.toString();
+        this.catId = this.nextCatId;
+        this.navCtrl.push(CatpagePage, { url: this.urlTemp, catId: this.nextCatId });
+      } else this.navCtrl.push(CatpagePage, { url: this.urlTemp, catId: "1" });
+    } else if (e.direction == 4) {
+      if (this.catId != "1") {
+        this.catIdTemp = parseInt(this.catId);
+        this.catIdTemp -= 1;
+        this.nextCatId = this.catIdTemp.toString();
+        this.catId = this.nextCatId;
+        this.navCtrl.push(CatpagePage, { url: this.urlTemp, catId: this.nextCatId });
+      } else this.navCtrl.push(CatpagePage, { url: this.urlTemp, catId: "9" });
+    }
   }
 }
