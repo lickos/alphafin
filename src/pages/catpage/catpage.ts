@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from "ionic-angular";
 import { GetdataProvider } from "../../providers/getdata/getdata";
 import { Slides } from "ionic-angular";
 import { ViewChild } from "@angular/core";
+import { ArticlePage } from "../article/article";
 
 @IonicPage()
 @Component({
@@ -56,27 +57,35 @@ export class CatpagePage {
           break;
         case "Πολιτική":
           this.badgeClass = "PolitikiClass";
+          this.titleColor = "PolitikiColor";
           break;
         case "Ελλάδα":
           this.badgeClass = "GreeceClass";
+          this.titleColor = "GreeceColor";
           break;
         case "Διεθνή":
           this.badgeClass = "DiethniClass";
+          this.titleColor = "DiethniColor";
           break;
         case "Αθλητικά":
           this.badgeClass = "SportsClass";
+          this.titleColor = "SportsColor";
           break;
         case "Ψυχαγωγία":
           this.badgeClass = "EntertainmentClass";
+          this.titleColor = "EntertainmentColor";
           break;
         case "Υγεία":
           this.badgeClass = "HealthClass";
+          this.titleColor = "HealthColor";
           break;
         case "Οικονομία":
           this.badgeClass = "EconomyClass";
+          this.titleColor = "EconomyColor";
           break;
         default:
           this.badgeClass = "DefaultClass";
+          this.titleColor = "DefColor";
       }
     });
   }
@@ -99,5 +108,9 @@ export class CatpagePage {
         this.navCtrl.push(CatpagePage, { url: this.urlTemp, catId: this.nextCatId });
       } else this.navCtrl.push(CatpagePage, { url: this.urlTemp, catId: "9" });
     }
+  }
+
+  openArticle(item) {
+    this.navCtrl.push(ArticlePage, {items: item});
   }
 }

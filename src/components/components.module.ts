@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { AlphaheaderComponent } from './alphaheader/alphaheader';
+import { AlphaheaderNoBurgerComponent } from './alphaheader-no-burger/alphaheader-no-burger';
 @NgModule({
-	declarations: [AlphaheaderComponent],
+	declarations: [AlphaheaderComponent,
+    AlphaheaderNoBurgerComponent],
 	imports: [],
-	exports: [AlphaheaderComponent]
+	exports: [AlphaheaderComponent,
+    AlphaheaderNoBurgerComponent]
 })
 export class ComponentsModule {}

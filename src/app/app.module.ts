@@ -7,12 +7,16 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { CatpagePage } from '../pages/catpage/catpage';
+import { ArticlePage } from '../pages/article/article';
 
 import { AlphaheaderComponent } from '../components/alphaheader/alphaheader';
+import { AlphaheaderNoBurgerComponent } from '../components/alphaheader-no-burger/alphaheader-no-burger';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
+import { StreamingMedia } from '@ionic-native/streaming-media';
+
 
 import { RemovequotesPipe } from '../pipes/removequotes/removequotes';
 
@@ -24,7 +28,9 @@ import { GetdataProvider } from '../providers/getdata/getdata';
     HomePage,
     CatpagePage,
     AlphaheaderComponent,
+    AlphaheaderNoBurgerComponent,
     ListPage,
+    ArticlePage,
     RemovequotesPipe
   ],
   imports: [
@@ -37,13 +43,16 @@ import { GetdataProvider } from '../providers/getdata/getdata';
     MyApp,
     HomePage,
     CatpagePage,
+    ArticlePage,
     AlphaheaderComponent,
+    AlphaheaderNoBurgerComponent,
     ListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     OneSignal,
+    StreamingMedia,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GetdataProvider
   ]
