@@ -4,6 +4,7 @@ import { GetdataProvider } from "../../providers/getdata/getdata";
 import { Slides } from "ionic-angular";
 import { ViewChild } from "@angular/core";
 import { ArticlePage } from "../article/article";
+import { Content } from "ionic-angular";
 
 @IonicPage()
 @Component({
@@ -11,6 +12,7 @@ import { ArticlePage } from "../article/article";
   templateUrl: "catpage.html"
 })
 export class CatpagePage {
+  @ViewChild(Content) content: Content;
   @ViewChild(Slides) slides: Slides;
   url: string;
   items: any;
@@ -30,6 +32,7 @@ export class CatpagePage {
   urlTemp: string;
   catIdTemp: any;
   nextCatId: string;
+  showSubmenu: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public getdata: GetdataProvider) {
     this.urlTemp = this.navParams.get("url");
@@ -111,6 +114,11 @@ export class CatpagePage {
   }
 
   openArticle(item) {
-    this.navCtrl.push(ArticlePage, {items: item});
+    this.navCtrl.push(ArticlePage, { items: item });
+  }
+
+  openSubMenu() {
+    this.showSubmenu = !this.showSubmenu;
+    this.content.scrollToBottom;
   }
 }
